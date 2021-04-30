@@ -75,5 +75,37 @@ namespace FindmaxMSTest
             string maxVal = GenericToFindMax<string>.FindMax("Sanju","Xerox","Bridgelabz");
             Assert.AreEqual("Xerox", maxVal);
         }
+
+
+        /// <summary>
+        /// Will return max float value.
+        /// </summary>
+        [TestMethod]
+        public void GivenMultipleFloatsValues_MaxATThirdPosition_ShouldReturnMax()
+        {
+            float maxVal = GenericToFindMax<float>.FindMax(20.5f, 30.5f, 50.5f, 555.6f,777.77f);
+            Assert.AreEqual(777.77f, maxVal);
+        }
+
+        /// <summary>
+        /// Will return max value
+        /// </summary>
+        [TestMethod]
+        public void GivenMultipleIntegerValues_MaxATThirdPosition_ShouldReturnMax()
+        {
+            int maxVal = GenericToFindMax<int>.FindMax(20, 30, 50,100,800);
+            Assert.AreEqual(800, maxVal);
+        }
+
+
+        /// <summary>
+        /// Given max string at 2nd position should return max string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMultipleStringValues_MaxATSecondPosition_ShouldReturnMax()
+        {
+            string maxVal = GenericToFindMax<string>.FindMax("Sanju", "Xerox", "Bridgelabz","Himanshu","Divya");
+            Assert.AreEqual("Xerox", maxVal);
+        }
     }
 }
